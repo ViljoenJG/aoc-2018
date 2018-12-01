@@ -13,7 +13,7 @@ describe('Day 1', () => {
   });
 
   describe('Part 2', () => {
-    test('Part2 should produce 3', () => {
+    test('Part2 should produce 2', () => {
       expect(part2(mockInput)).toBe(2);
     });
   });
