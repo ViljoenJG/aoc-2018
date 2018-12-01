@@ -3,8 +3,7 @@ const calibrate = seed => input => input.reduce((a, c) => (a += c), seed);
 
 const part1 = input => calibrate(0)(parseInput(input));
 
-const used = {};
-const checkUsed = val => {
+const checkUsed = (val, used) => {
   if (used[val]) {
     return true;
   }
@@ -15,13 +14,14 @@ const checkUsed = val => {
 
 const part2 = input => {
   const inputArr = parseInput(input);
+  const used = {};
   let val = 0;
   let idx = 0;
 
   while (true) {
     if (idx === inputArr.length) idx = 0;
     val += inputArr[idx++];
-    if (checkUsed(val)) return val;
+    if (checkUsed(val, used)) return val;
   }
 };
 
