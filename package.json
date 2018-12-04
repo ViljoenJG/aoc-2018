@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ViljoenJG/aoc-2018#readme",
   "dependencies": {
+    "date-fns": "^1.29.0",
     "fsevents": "^2.0.1",
     "jest": "^23.6.0"
   }
