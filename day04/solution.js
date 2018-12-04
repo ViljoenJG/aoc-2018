@@ -1,4 +1,3 @@
-const { differenceInMinutes } = require('date-fns');
 const { range } = require('../utils');
 
 const parseFile = fileData =>
