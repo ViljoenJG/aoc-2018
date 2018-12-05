@@ -8,6 +8,6 @@ describe('Day 5', () => {
   });
 
   test('Part2', () => {
-    expect(part2(mockInput)).toBe();
+    expect(part2(mockInput)).toBe(4);
   });
 });
