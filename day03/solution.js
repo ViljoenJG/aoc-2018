@@ -10,8 +10,8 @@ const parseFile = input =>
 
 const part1 = input => {
   const claims = parseFile(input);
-  claims;
   const fabricMatrix = {};
+
   for (let claim of claims) {
     let [id, x, y, dx, dy] = claim;
     for (let a of range(x, x + dx)) {
