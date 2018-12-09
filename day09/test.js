@@ -1,6 +1,6 @@
 const { part1, part2 } = require('./solution');
 
-describe('Day 5', () => {
+describe('Day 9', () => {
   test('Case 1', () => {
     expect(part1('10 players; last marble is worth 1618 points')).toBe(8317);
   });
