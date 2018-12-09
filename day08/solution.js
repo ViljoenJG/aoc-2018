@@ -22,13 +22,13 @@ const part1 = input => {
   return total;
 };
 
-const getNode = items => ({
+const getNode = (items, parent = null) => ({
   value: 0,
   entries: items.shift(),
   metaCount: items.shift(),
   meta: [],
   children: [],
-  parent: null,
+  parent: parent,
 });
 
 const calculateNodeValue = node => {
@@ -53,13 +53,14 @@ const part2 = input => {
 
   while (items.length) {
     if (current.entries > 0) {
-      current.entries--;
-      const newNode = { ...getNode(items), parent: current };
+      const newNode = getNode(items, current);
+
       current.children.push(newNode);
+      current.entries--;
       current = newNode;
     } else if (current.metaCount > 0) {
-      current.metaCount--;
       current.meta.push(items.shift());
+      current.metaCount--;
     } else {
       current.value = calculateNodeValue(current);
       current = current.parent;
